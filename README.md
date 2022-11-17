@@ -2,4 +2,4 @@
 
 Made By Utkarsh.Ravi,Eshan
 
-Wifi and Bluetooth DDOS script written in python for educational purpose
+Wifi Jammer, Vulnerable Wifi Finder and Mac Changer made in Bash
