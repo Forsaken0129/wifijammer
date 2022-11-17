@@ -80,4 +80,4 @@ ${R}
         ░${RST}                   ${G}${BOLD}~=:by Forsaken:=~${RST}
               > ${C}\033[4mhttps://github.com/forsaken0129/WifiJammer${RST} <
 """
-echo -e "-=[ ${Y}${BOLD}Good Job EveryThing is ready now u can run the tool by using command {./wifijammer.sh }${RST} ]=-\n"
+echo -e "-=[ ${Y}${BOLD}Good Job EveryThing is ready now u can run the tool by using command {jammer }${RST} ]=-\n"
