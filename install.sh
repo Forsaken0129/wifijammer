@@ -52,7 +52,7 @@ echo -e "-=[ ${Y}${BOLD}INSTALL DEPENDENCIES${RST} ]=-\n"
 apt install xterm -y
 apt install aircrack-ng -y
 apt install mdk4 -y
-mkdir /root/wifijammer/tmp
+mkdir tmp
 clear
 echo -e """
 ${R}
