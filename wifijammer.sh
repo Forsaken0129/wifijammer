@@ -102,7 +102,7 @@ function check_mode() {
 }
 
 function change_mode() {
-  airmon-ng start $iface > /dev/null 2>&1
+  airmon-ng start $iface -c 11 > /dev/null 2>&1
   chck=$(iw $iface info | grep "type" )
   if [[ $chck == *'m'* ]]; then
     echo -e "\n\n[${G}${BOLD}+${RST}] Success change to monitor mode"
