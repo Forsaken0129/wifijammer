@@ -102,7 +102,7 @@ function check_mode() {
 }
 
 function change_mode() {
-  airmon-ng start $iface -c 11 > /dev/null 2>&1
+  airmon-ng start $iface > /dev/null 2>&1
   chck=$(iw $iface info | grep "type" )
   if [[ $chck == *'m'* ]]; then
     echo -e "\n\n[${G}${BOLD}+${RST}] Success change to monitor mode"
@@ -147,7 +147,7 @@ function target() {
   echo -e "-=[ ${Y}${BOLD}EXPLORING TARGET${RST} ]=-\n"
   loading3&
   echo -e "[${Y}${BOLD}*${RST}] Wait at least 5 second and then press CTRL+C to stop"
-  xterm -e /bin/bash -l -c "airodump-ng -w tmp/target --output-format csv ${iface}"
+  xterm -e /bin/bash -l -c "airodump-ng -w tmp/target --output-format csv ${iface} -c 11"
   clear
   banner
   echo -e "-=[ ${Y}${BOLD}SELECT TARGET${RST} ]=-\n"
