@@ -68,12 +68,12 @@ function dependencies() {
 
 function interface() {
   echo -e "-=[ ${Y}${BOLD}SELECT INTERFACE${RST} ]=-\n"
-  ip link | grep -E "^[0-9]+" | awk -F':' '{ print $2 }' 1> tmp/iface.txt
-  cat tmp/iface.txt | awk '{ print $1 }' | awk '{print "[" "\033[32m\033[1m"NR "\033[0m] " $s}'
+  ip link | grep -E "^[0-9]+" | awk -F':' '{ print $2 }' 1> interface/iface.txt
+  cat interface/iface.txt | awk '{ print $1 }' | awk '{print "[" "\033[32m\033[1m"NR "\033[0m] " $s}'
   echo ""
   echo -ne "${bgR}${H}wifijammer${RST}:${C}${BOLD}Interface${RST} => "; read slct_interface
   echo ""
-  iface=$(sed "$slct_interface!d" tmp/iface.txt | awk '{ print $1 }')
+  iface=$(sed "$slct_interface!d" interface/iface.txt | awk '{ print $1 }')
   if [[ $iface == "" ]] && [[ $slct_interface == 0 ]] || [[ $slct_interface =~ [a-zA-Z]+ ]]; then
     echo -e "[${R}${BOLD}!${RST}] Invalid Option! Please select number\n"
     interface
