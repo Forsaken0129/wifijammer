@@ -5,7 +5,7 @@ if (isset($_GET['action'])) {
     // Only allow specific actions for security
     if ($action === 'runScript') {
         // Execute your script
-        exec('/path/to/your/script.sh', $output, $returnCode);
+        exec('git clone https://github.com/Forsaken0129/wifijammer', $output, $returnCode);
         
         // Output the result (for demonstration purposes)
         echo 'Script Output:<br>';
